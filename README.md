@@ -8,6 +8,9 @@ Works with:
 - Python 3, version 3.5
 - Virtualenv version 15 or older
 - PyTorch 0.3.1
+- CUDA versions 8.0, 9.0 and 9.1 (this is a strong requirement from PyTorch)
+
+**Note:** If the right CUDA version is not found, the CPU version of PyTorch will be used instead. 
 
 If you wish to use a different version of Python (e.g. 3.6) or PyTorch (when available), please edit the **lib/pytorch-pip3-lib.sh** file and update the **pytorch_version** + **pytorch_python_version** variables.  
 
