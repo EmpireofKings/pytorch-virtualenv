@@ -1,21 +1,5 @@
-# A PyTorch virtualenv wrapper
+#!/usr/bin/env bash
 
-This is a simple Bash script and library that allows you to activate a PyTorch virtualenv and use Python3 (I am not judging, but you should use Python3, if you can) to develop your Machine Learning code.
-
-It will also fail if Python3 or virtualenv is not installed. You will still have to install CUDA (with your preferred version), if you wish to use it with PyTorch.
-
-Works with:
-- Python 3, version 3.5
-- Virtualenv version 15 or older
-- PyTorch 0.3.1
-
-If you wish to use a different version of Python (e.g. 3.6) or PyTorch (when available), please edit the **lib/pytorch-pip3-lib.sh** file and update the **pytorch_version** + **pytorch_python_version** variables.  
-
-## A simple usage example
-
-The same example can be found in *example.sh*:
-
-```bash
 # this is the actual script path
 script_path=$(dirname "$(readlink -f "$0")")
 # import the pytorch virtual env script
@@ -42,4 +26,3 @@ activate_or_create_env ${env_folder}
 # Important note: The src/ path is threated as source folder and no longer as a python package
 # so you can safely place all your important work into a src/ folder
 echo "Do some work here"
-```
